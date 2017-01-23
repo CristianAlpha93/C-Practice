@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485102257 source:c:\users\cristian\c-projects\array searching\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
