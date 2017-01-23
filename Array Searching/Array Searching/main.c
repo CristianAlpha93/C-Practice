@@ -114,7 +114,15 @@ int main()
                 if (array == NULL)
                 {
                     printf("Define the size of the array\n");
-                    scanf("%d",&dimension);
+                    do
+                    {
+                        scanf("%d",&dimension);
+                        if (dimension == 0)
+                        {
+                            printf("%d is not a valid array dimension, insert a valid value\n", dimension);
+                        }
+                        fflush(stdin);
+                    }while (dimension == 0);
                     printf("The array will be able to contain %d elements\n", dimension);
                     array = calloc (dimension, sizeof(*array)); //allocate memory for the array, set it to 0
                     break;
@@ -125,7 +133,15 @@ int main()
                     free(array); //clear the memory area assigned to array
                     array = NULL; //point to NULL
                     printf("Define the size of the array\n");
-                    scanf("%d",&dimension);
+                    do
+                    {
+                        scanf("%d",&dimension);
+                        if (dimension == 0)
+                        {
+                            printf("%d is not a valid array dimension, insert a valid value\n", dimension);
+                        }
+                        fflush(stdin);
+                    }while (dimension == 0);
                     printf("The array will be able to contain %d elements\n", dimension);
                     array = calloc (dimension, sizeof(*array)); //allocate memory for the array, set it to 0
                     break;
