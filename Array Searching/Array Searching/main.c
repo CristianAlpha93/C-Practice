@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-/*Current bug list:
-  - pressing X at ANY time leads to exit
-  - printf prints more than once
-*/
 void SearchItem (int *a, unsigned int b)
 {
     int n = 0;
