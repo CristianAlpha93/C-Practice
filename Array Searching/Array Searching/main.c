@@ -86,10 +86,14 @@ int main()
     unsigned int dimension = 0;
     char operation;
     int *array = NULL; //good practice, set pointers to null
+    printf("List of commands:\nN to define a new array\n");
+    printf("I to add data\n");
+    printf("S to look for a number\n");
+    printf("C to count the copies of an item\n");
+    printf("P to print the content of the array\n");
+    printf("X to exit\n");
     while(operation != 'X')
     {
-        printf("Pick your next operation: N to define a new array, S to look for a number, I to add data, P to print the content of the array, C to count the copies of an item\n");
-        printf("X to exit\n");
         fflush(stdin);
         scanf("%c",&operation);
         operation = toupper(operation); //turn non-capital letters into capital
@@ -161,8 +165,13 @@ int main()
                 }
         };
     }
-    printf("Clearing array memory area");
-    free(array);
-    array = NULL;
+    if (array != NULL) //if pointer isn't NULL
+    {
+        printf("Clearing array memory area\n");
+        free(array); //clear the array
+        array = NULL; //set pointer to NULL
+    }
+    printf("Exiting...");
+    fflush(stdin);
     return 0;
 }
